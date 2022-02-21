@@ -1,2 +1,6 @@
 export { default as LocationMaker } from './LocationMaker'
 export { default as Home } from './Home'
+export { default as IconExit } from './Exit'
+export { default as IconProduct } from './Product'
+export { default as IconAboutUs } from './AboutUs'
+export { default as IconContact } from './Contact'

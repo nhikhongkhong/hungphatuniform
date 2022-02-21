@@ -18,10 +18,7 @@ const SearchForm = () => {
         onKeyPress={handleAction.onKeyPress}
         placeholder={'Gõ từ khoá sản phẩm bạn muốn tìm ...'}
       />
-      <div
-        className="mr-3 flex items-center bg-green-700 rounded-r-lg px-4 cursor-pointer"
-        onClick={handleAction.search}
-      >
+      <div className="mr-3 flex items-center bg-green-700 rounded-r px-4 cursor-pointer" onClick={handleAction.search}>
         <BsSearch className="fill-white" />
       </div>
     </div>

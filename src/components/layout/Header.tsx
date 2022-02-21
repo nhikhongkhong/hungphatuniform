@@ -1,13 +1,45 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { GrLocation } from 'react-icons/gr'
+import { AiOutlineMenu } from 'react-icons/ai'
+import { useMedia, useClickAway } from 'react-use'
+
 import { LocationMaker } from '@components/icons'
 import { Info } from '@assets/info'
 import HeaderNavbar from './HeaderNavbar'
 import SearchForm from './SearchForm'
+import NavBarMobile from './NavBarMobile'
 
 const Header = () => {
-  return (
+  const isMobile = useMedia('(max-width: 640px)')
+  const [enableSidebarMobile, setEnableSidebarMobile] = useState<boolean>(false)
+  const handleAction = {
+    closeNavBar: () => {
+      setEnableSidebarMobile(false)
+    },
+    toggleNavBar: () => {
+      setEnableSidebarMobile(!enableSidebarMobile)
+    },
+  }
+  const renderMobile = (
+    <div className="w-full">
+      <div className="flex justify-between items-center p-2">
+        <div
+          className="bg-green-700 w-[40px] h-[40px] flex justify-center items-center cursor-pointer"
+          onClick={handleAction.toggleNavBar}
+        >
+          <AiOutlineMenu className="fill-white w-[25px] h-[25px]" />
+        </div>
+        <Image src="/logo.jpg" alt="logo" width={60} height={60} />
+        <div></div>
+      </div>
+      <div className="bg-gradient-to-r from-gray-100 via-gray-300 to-gray-100 p-2">
+        <SearchForm />
+      </div>
+      {enableSidebarMobile && <NavBarMobile closeNavBar={handleAction.closeNavBar} />}
+    </div>
+  )
+  const renderWebview = (
     <div className="w-full">
       <div className="w-full bg-gradient-to-b from-green-500 to-green-600">
         <div className="flex justify-between items-center layout h-[40px] ">
@@ -29,7 +61,6 @@ const Header = () => {
           </div>
         </div>
         <SearchForm />
-
         <div className="text-right ml-20">
           <p className="text-sm">Hotline tư vấn</p>
           <ul>
@@ -49,6 +80,8 @@ const Header = () => {
       <HeaderNavbar />
     </div>
   )
+
+  return isMobile ? renderMobile : renderWebview
 }
 
 export default Header
