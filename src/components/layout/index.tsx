@@ -9,7 +9,7 @@ const Layout = (props: FCProps) => {
   return (
     <div className={`flex flex-col items-center min-h-screen w-full`}>
       <Header />
-      <div className="w-full lg:w-3/5 flex-1">{children}</div>
+      <div className="w-full  flex-1">{children}</div>
       <Footer />
     </div>
   )

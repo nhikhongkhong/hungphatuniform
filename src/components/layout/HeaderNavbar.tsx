@@ -33,7 +33,7 @@ const HeaderNavbar = () => {
       ],
     },
   ]
-  const [showDropdown, setShowDropdown] = useState<boolean>(true)
+  const [showDropdown, setShowDropdown] = useState<boolean>(false)
 
   const handleAction = {
     onMouseEnter: () => {

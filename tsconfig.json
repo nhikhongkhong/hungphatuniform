@@ -44,8 +44,8 @@
       "@helpers/*": [
         "helpers/*"
       ],
-      "@services/*": [
-        "services/*"
+      "@hoc/*": [
+        "hoc/*"
       ]
     },
     "target": "es5",
