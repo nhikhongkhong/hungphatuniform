@@ -5,13 +5,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import * as _ from 'lodash'
 
-import { SliderTop } from '@components/slider-top'
-import styles from '../styles/Home.module.css'
-import bfooter from '@assets/images/bfooter.png'
 import WithLayout from '@hoc/WithLayout'
 import Collection from '@components/collection'
-import { LatestCollection, TrendingCollection, PopularCollection } from '@assets/data'
-import { SideNav } from '@components/side-nav'
 import { validPath, getDataFromPath } from '@helpers/utils'
 import { ItemModelITF } from '@interfaces'
 

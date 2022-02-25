@@ -3,8 +3,8 @@ import Image from 'next/image'
 import * as _ from 'lodash'
 import Marquee from 'react-fast-marquee'
 
-import BgName from '@assets/images/bg_name.png'
-import LineStar from '@assets/images/line_name.png'
+const BgName = '@assets/images/bg_name.png'
+const LineStar = '@assets/images/line_name.png'
 const ListCustomer = () => {
   const listCustomer = [
     { src: '/images/customer/baolong.png', alt: 'baolong' },
@@ -21,7 +21,7 @@ const ListCustomer = () => {
     <div className="layout">
       <h1
         style={{
-          backgroundImage: `url(${BgName.src})`,
+          backgroundImage: `url('images/bg_name.png')`,
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
         }}
@@ -31,7 +31,7 @@ const ListCustomer = () => {
       </h1>
       <div
         style={{
-          backgroundImage: `url(${LineStar.src})`,
+          backgroundImage: `url('/images/line_name.png')`,
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
         }}

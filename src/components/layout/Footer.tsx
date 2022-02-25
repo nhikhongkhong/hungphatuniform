@@ -8,7 +8,7 @@ import { HiOutlineCash } from 'react-icons/hi'
 import { GiFactory } from 'react-icons/gi'
 import { MdSendToMobile } from 'react-icons/md'
 import ListCustomer from '@components/ListCustomer'
-import bfooter from '@assets/images/bfooter.png'
+const bfooter = '@assets/images/bfooter.png'
 
 const Footer = () => {
   const isMobile = useMedia('(max-width: 640px)')
@@ -141,7 +141,7 @@ const Footer = () => {
       <ListCustomer />
       <div
         style={{
-          backgroundImage: `url(${bfooter.src})`,
+          backgroundImage: `url('/images/bfooter.png')`,
           backgroundRepeat: 'repeat-x',
           backgroundPosition: 'center bottom',
           backgroundSize: 'contain',

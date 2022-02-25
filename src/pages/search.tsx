@@ -35,7 +35,7 @@ const Home: NextPage<Props> = (props: Props) => {
             <h1
               className="font-bold uppercase text-white text-left pl-[50px] h-[45px] flex items-center"
               style={{
-                backgroundImage: `url(${TextBg.src})`,
+                backgroundImage: `url('/images/text_bg/png')`,
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'left center',
               }}

@@ -2,7 +2,7 @@ import React from 'react'
 import Item from './Item'
 import Slider from 'react-slick'
 import * as _ from 'lodash'
-import BgName from '@assets/images/bg_name.png'
+const BgName = '@assets/images/bg_name.png'
 
 import { ItemModelITF } from '@interfaces'
 
@@ -55,7 +55,7 @@ const index = (props: CollcetionPropsITF) => {
     <div className={`layout-slider ${color || 'bg-red-600'} p-1 rounded ${className}`}>
       <h1
         style={{
-          backgroundImage: `url(${BgName.src})`,
+          backgroundImage: `url('/images/bg_name.png')`,
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
         }}
