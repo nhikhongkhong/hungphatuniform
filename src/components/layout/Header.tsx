@@ -22,7 +22,7 @@ const Header = () => {
     },
   }
   const renderMobile = (
-    <div className="w-full">
+    <div className="w-full bg-white">
       <div className="flex justify-between items-center p-2">
         <div
           className="bg-green-700 w-[40px] h-[40px] flex justify-center items-center cursor-pointer"
@@ -40,7 +40,7 @@ const Header = () => {
     </div>
   )
   const renderWebview = (
-    <div className="w-full">
+    <div className="w-full bg-white">
       <div className="w-full bg-gradient-to-b from-green-500 to-green-600">
         <div className="flex justify-between items-center layout h-[40px] ">
           <p className="text-sm italic text-white font-semibold">{Info.welcomeMessage} !</p>

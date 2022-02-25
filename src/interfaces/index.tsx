@@ -6,4 +6,10 @@ interface IconPropsITF {
   hoverColor: string
 }
 
-export type { FCProps, IconPropsITF }
+interface ItemModelITF {
+  imgSrc: string
+  title: string
+  code: string
+}
+
+export type { FCProps, IconPropsITF, ItemModelITF }

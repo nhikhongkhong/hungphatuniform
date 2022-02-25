@@ -2,12 +2,21 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { SliderTop } from '@components/slider-top'
-import styles from '../styles/Home.module.css'
-import bfooter from '@assets/images/bfooter.png'
 import WithLayout from '@hoc/WithLayout'
+import Collection from '@components/collection'
+import { LatestCollection, TrendingCollection, PopularCollection } from '@assets/data'
 
 const Home: NextPage = () => {
-  console.log(bfooter)
+  const listItem = [
+    { imgSrc: '/images/t-shirt/tshirt-2.jpg', title: 'Áo phông T02' },
+    { imgSrc: '/images/t-shirt/tshirt-2.jpg', title: 'Áo phông T02' },
+    { imgSrc: '/images/t-shirt/tshirt-2.jpg', title: 'Áo phông T02' },
+    { imgSrc: '/images/t-shirt/tshirt-2.jpg', title: 'Áo phông T02' },
+    { imgSrc: '/images/t-shirt/tshirt-2.jpg', title: 'Áo phông T02' },
+    { imgSrc: '/images/t-shirt/tshirt-2.jpg', title: 'Áo phông T02' },
+    { imgSrc: '/images/t-shirt/tshirt-2.jpg', title: 'Áo phông T02' },
+  ]
+
   return (
     <>
       <Head>
@@ -19,15 +28,9 @@ const Home: NextPage = () => {
       <div className="layout">
         <SliderTop />
       </div>
-      <div
-        style={{
-          backgroundImage: `url(${bfooter.src})`,
-          backgroundRepeat: 'repeat-x',
-          backgroundPosition: 'center bottom',
-          backgroundSize: 'contain',
-        }}
-        className="h-[95px] w-full bg-[#f2f2f2]"
-      ></div>
+      <Collection listItems={LatestCollection} title={'Sản phẩm mới nhất'} color="" className="mb-5" />
+      <Collection listItems={TrendingCollection} title={'Sản phẩm nổi bật'} color="bg-[#176334]" className="mb-5" />
+      <Collection listItems={PopularCollection} title={'Quan tâm nhiều nhất'} color="bg-[#FE8A25]" className="mb-5" />
     </>
   )
 }

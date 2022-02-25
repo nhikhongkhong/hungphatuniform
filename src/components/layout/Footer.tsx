@@ -7,6 +7,8 @@ import { AiOutlinePhone, AiOutlineMail } from 'react-icons/ai'
 import { HiOutlineCash } from 'react-icons/hi'
 import { GiFactory } from 'react-icons/gi'
 import { MdSendToMobile } from 'react-icons/md'
+import ListCustomer from '@components/ListCustomer'
+import bfooter from '@assets/images/bfooter.png'
 
 const Footer = () => {
   const isMobile = useMedia('(max-width: 640px)')
@@ -135,12 +137,22 @@ const Footer = () => {
   )
 
   return (
-    <>
+    <div className="w-full bg-[#EFEFEF]">
+      <ListCustomer />
+      <div
+        style={{
+          backgroundImage: `url(${bfooter.src})`,
+          backgroundRepeat: 'repeat-x',
+          backgroundPosition: 'center bottom',
+          backgroundSize: 'contain',
+        }}
+        className="h-[95px] w-full bg-[#f2f2f2]"
+      ></div>
       {isMobile ? renderMobile : renderWebView}
       <div className="bg-[#034826] w-full ">
         <p className="layout text-white text-sm py-2 md:px-0">@2022 - Hưng Phát Uniform</p>
       </div>
-    </>
+    </div>
   )
 }
 

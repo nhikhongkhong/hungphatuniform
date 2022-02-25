@@ -2,8 +2,11 @@ import React from 'react'
 import Slider from 'react-slick'
 import Image from 'next/image'
 import * as _ from 'lodash'
+import { useMedia } from 'react-use'
 
 const SliderTop = () => {
+  const isMobile = useMedia('(max-width: 640px)')
+
   const settings = {
     dots: true,
     infinite: true,
@@ -84,7 +87,13 @@ const SliderTop = () => {
         {_.map(listProduct, (prod) => {
           return (
             <div className="flex flex-col items-center border-x text-center text-gray-500">
-              <Image src={prod.url} width={70} height={70} alt="image" className="opacity-70" />
+              <Image
+                src={prod.url}
+                width={isMobile ? 40 : 70}
+                height={isMobile ? 40 : 70}
+                alt="image"
+                className="opacity-70"
+              />
               <p className="text-sm truncate">{prod.title}</p>
             </div>
           )
