@@ -11,6 +11,7 @@ const HeaderNavbar = () => {
     { title: 'Trang chủ', href: '/' },
     { title: 'Danh mục sản phẩm', href: '/products' },
     { title: 'Về chúng tôi', href: '/about-us' },
+    { title: 'Quà tặng doanh nghiệp', href: '/gift' },
     { title: 'Liên hệ', href: '/contact' },
   ]
   const listProducts = [

@@ -57,10 +57,10 @@ const SliderTop = () => {
   }
 
   const listImage = [
-    '/images/slider-image/slider-1.jpeg',
-    '/images/slider-image/slider-2.jpeg',
-    '/images/slider-image/slider-3.jpeg',
-    '/images/slider-image/slider-4.jpeg',
+    '/images/slider-image/slider-1.jpg',
+    '/images/slider-image/slider-2.jpg',
+    '/images/slider-image/slider-3.jpg',
+    '/images/slider-image/slider-4.jpg',
   ]
 
   const listProduct = [
