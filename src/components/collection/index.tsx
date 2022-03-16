@@ -24,7 +24,7 @@ const index = (props: CollcetionPropsITF) => {
     autoplaySpeed: 2000,
     pauseOnHover: true,
     speed: 500,
-    arrow: false,
+    arrows: false,
     swipeToSlide: true,
     responsive: [
       {

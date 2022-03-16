@@ -14,7 +14,7 @@ const Footer = () => {
   const isMobile = useMedia('(max-width: 640px)')
 
   const renderCompanyAddress = (
-    <>
+    <div className="col-span-1 break-words">
       <div>
         <h2 className="text-base font-semibold">Nhà máy sản xuất</h2>
         <p className="text-sm my-3 flex text-white">
@@ -49,7 +49,7 @@ const Footer = () => {
           </a>
         </p>
       </div>
-    </>
+    </div>
   )
   const renderCompanyInfo = (
     <div className="col-span-1 break-words">
@@ -86,14 +86,14 @@ const Footer = () => {
   )
 
   const renderMobile = (
-    <div className="bg-[#006332] w-full text-white py-4 px-2 divide-y divide-gray-100 divide-opacity-20">
+    <div className="bg-[#006332] w-full text-white py-4 px-2 divide-y divide-gray-100 divide-opacity-20 md:hidden">
       {renderCompanyInfo}
       {renderCompanyAddress}
     </div>
   )
 
   const renderWebView = (
-    <div className="bg-[#006332] w-full text-white py-12">
+    <div className="bg-[#006332] w-full text-white py-12 hidden md:relative">
       <div className="layout ">
         <div className="grid grid-cols-3">
           {renderCompanyInfo}
@@ -148,7 +148,7 @@ const Footer = () => {
         }}
         className="h-[95px] w-full bg-[#f2f2f2]"
       ></div>
-      {isMobile ? renderMobile : renderWebView}
+      {renderMobile} {renderWebView}
       <div className="bg-[#034826] w-full ">
         <p className="layout text-white text-sm py-2 md:px-0">@2022 - Hưng Phát Uniform</p>
       </div>

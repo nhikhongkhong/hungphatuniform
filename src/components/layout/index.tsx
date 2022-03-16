@@ -7,9 +7,9 @@ import { FCProps } from '@interfaces/index'
 const Layout = (props: FCProps) => {
   const { children } = props
   return (
-    <div className={`flex flex-col items-center min-h-screen w-full`}>
+    <div className={`flex flex-col items-center min-h-screen w-screen`}>
       <Header />
-      <div className="w-full  flex-1">{children}</div>
+      <div className="w-screen flex-1">{children}</div>
       <Footer />
     </div>
   )

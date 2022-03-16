@@ -16,7 +16,7 @@ const SliderTop = () => {
     autoplaySpeed: 2000,
     pauseOnHover: false,
     speed: 500,
-    arrow: false,
+    arrows: false,
   }
   const settingProduct = {
     dots: true,
@@ -27,7 +27,7 @@ const SliderTop = () => {
     autoplaySpeed: 2500,
     pauseOnHover: false,
     speed: 500,
-    arrow: false,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1024,
