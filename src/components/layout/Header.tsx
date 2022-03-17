@@ -40,7 +40,7 @@ const Header = () => {
     </div>
   )
   const renderWebview = (
-    <div className="w-full bg-white hidden md:relative">
+    <div className="w-full bg-white hidden  md:block lg:block xl:block 2xl:block">
       <div className="w-full bg-gradient-to-b from-green-500 to-green-600">
         <div className="flex justify-between items-center layout h-[40px] ">
           <p className="text-sm italic text-white font-semibold">{Info.welcomeMessage} !</p>

@@ -93,7 +93,7 @@ const Footer = () => {
   )
 
   const renderWebView = (
-    <div className="bg-[#006332] w-full text-white py-12 hidden md:relative">
+    <div className="bg-[#006332] w-full text-white py-12 hidden  md:block lg:block xl:block 2xl:block">
       <div className="layout ">
         <div className="grid grid-cols-3">
           {renderCompanyInfo}
